@@ -9,22 +9,6 @@
  */
 public abstract class Demon extends Creature
 {
-    private int str;        // The strength of this creature
-    private int max_hp;     // The maximum hit points the creature can have (used if healing enabled)
-    private int hp;         // the current number of hit points the creature has
-    
-    /**
-     * default constructor - this should never actually run.
-     * It is the job of dervived classes to set up the proper number of hit points and 
-     * strength for the subclass
-     */
-    public Demon()
-    {
-        str=10;
-        hp=10;
-        max_hp = hp;
-    }
-    
     /**
      * Create a Demon with a given strength and hit point level. 
      * Store max hitpoints to allow for healing to be implemented later
@@ -36,9 +20,7 @@ public abstract class Demon extends Creature
      */
     public Demon(int str, int hp) 
     {
-       this.str = str;
-       this.hp = hp;
-       max_hp  = hp;
+       super(str, hp);
     }
         
      /**
@@ -53,16 +35,20 @@ public abstract class Demon extends Creature
         //Determine if this is a 5% chance, or 1 in 20
         int chance = Randomizer.nextInt(20);
         //Let chance ==1 be the 5% chance
+        //Call the Creature attack() method
+        int attackValue = super.attack();
         if (chance == 1)
         {
-            return (super.attack() + 50);
+            System.out.println("Demon plus 50 damage given: " + (attackValue +50));
+            return attackValue + 50;
         }
         else
         {
-            return super.attack();
+            System.out.println("Demon regular damage given: " + attackValue);
+            return attackValue;
         }    
     }
 }    
     
         
-    // takeDamage(int) - not overridden, because Elfs take all damage assigned to them
+    // takeDamage(int) - not overridden, because Demons take all damage assigned to them

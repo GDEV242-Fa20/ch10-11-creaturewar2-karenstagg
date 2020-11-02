@@ -49,7 +49,7 @@ public class Balrog extends Demon
     public int attack()
     {
         //Overrides superclass method and calls the super attack() method
-        //Ask Demon to compute damage
+        //Ask Demon class to compute damage
         int totBalrogDamage = 0; 
         for (int i = 1; i <=2; i++)
         {
@@ -58,3 +58,5 @@ public class Balrog extends Demon
         return totBalrogDamage;
     }
 } 
+
+// takeDamage(int) - not overridden, because Balrogs take all damage assigned to them

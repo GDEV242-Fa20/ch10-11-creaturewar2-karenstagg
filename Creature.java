@@ -51,7 +51,9 @@ public abstract class Creature
      */
     public int attack()
     {
-        return damage();
+        int damage = damage();
+        System.out.println("creature damage given: " + damage);
+        return damage;
     }
     
     /**
@@ -103,6 +105,7 @@ public abstract class Creature
     public void takeDamage(int damage) 
     {
         hp -= damage;
+        System.out.println("Damage received: " + damage + " Total health remaining: " + getHealth());
     }
     
     /**

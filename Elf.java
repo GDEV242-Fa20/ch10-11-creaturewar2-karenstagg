@@ -42,24 +42,28 @@ public class Elf extends Creature
             Randomizer.nextInt(MAX_ELF_HP-MIN_ELF_HP)+MIN_ELF_HP);   
     }
     
-     /**
+    /**
      * Allows a creature to determine how much damage it is causing in this round of battle
      * @return a value that is the value of the superclass creature attack value, or 10% of
      * the time is a value equal to double of that value.
-    */
+     */
     public int attack()
     {
         //Overrides superclass method and 10% of the time doubles the damage value
         //Determine if this is a 10% chance, or 1 in 10
         int chance = Randomizer.nextInt(10);
         //Let chance ==1 be the 10% chance
+        //Call the Creature attack() method
+        int attackValue = super.attack();
         if (chance == 1)
         {
-            return (super.attack() * 2);
+            System.out.println("Elf double damage given: " + (attackValue * 2));
+            return (attackValue * 2);
         }
         else
         {
-            return super.attack();
+            System.out.println("Elf regular damage given: " + attackValue);
+            return attackValue;
         } 
     }
     
