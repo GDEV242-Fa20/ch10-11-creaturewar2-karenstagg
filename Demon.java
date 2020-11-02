@@ -11,7 +11,7 @@ public abstract class Demon extends Creature
 {
     /**
      * Create a Demon with a given strength and hit point level. 
-     * Store max hitpoints to allow for healing to be implemented later
+     * 
      * Heals must never allow for more hit points than the creature started
      * with
      * @param str the strength of the creature, used to calculate damage
