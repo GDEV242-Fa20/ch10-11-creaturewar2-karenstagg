@@ -22,4 +22,4 @@ public abstract class Hobbit extends Creature
 }    
     
     // attack() - not overridden because Hobbits generate basic damage   
-    // takeDamage(int) - not overridden, because Demons take all damage assigned to them
+    // takeDamage(int) - not overridden, because Hobbits take all damage assigned to them

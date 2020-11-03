@@ -61,4 +61,4 @@ public class MegaHobbit extends Hobbit
     }
 }
         
-    // takeDamage(int) - not overridden, because CyberDemons take all damage assigned to them
+    // takeDamage(int) - not overridden, because MegaHobbits take all damage assigned to them

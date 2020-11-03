@@ -52,7 +52,8 @@ public abstract class Creature
     public int attack()
     {
         int damage = damage();
-        System.out.println("creature damage given: " + damage);
+        System.out.println("The " + getClass() + " base damage assessed: " + 
+                      damage);
         return damage;
     }
     
@@ -105,7 +106,7 @@ public abstract class Creature
     public void takeDamage(int damage) 
     {
         hp -= damage;
-        System.out.println("Damage received: " + damage + " Total health remaining: " + getHealth());
+        //System.out.println("Damage received: " + damage + " Total health remaining: " + getHealth());
     }
     
     /**
@@ -116,5 +117,17 @@ public abstract class Creature
     public int getHealth() 
     {
         return hp;
+    }
+    
+    /**
+     * the toString override returns a string of the contents of the Creature object, 
+     * providing the strength and hitpoint values.
+     * 
+     * @return a String with the Creature objects str and hp values
+     */
+    public String toString() 
+    {
+        String contents = "str: " + str + " hp: " + hp;
+        return contents;
     }
 }

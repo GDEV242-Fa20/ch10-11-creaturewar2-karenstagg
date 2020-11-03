@@ -70,4 +70,4 @@ public class SonicHobbit extends Hobbit
     
 }
         
-    // takeDamage(int) - not overridden, because CyberDemons take all damage assigned to them
+    // takeDamage(int) - not overridden, because SonicHobbits take all damage assigned to them
