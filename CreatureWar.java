@@ -3,6 +3,8 @@
  * The CreatureWar class creates a good army and a bad army of Creatures and
  * has them battle each other to the end.
  * An action report at the end will report on the status of the winner.
+ * 
+ * To start the game, create a new CreatureWar object.  
  *
  * @author Karen Stagg
  * @version November 09, 2020
